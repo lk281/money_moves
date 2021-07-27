@@ -1,11 +1,22 @@
-
 body {
-    background-color: #614344;
+    text-align: center;
+    background-color: #735751;
+    padding: 170px 0;
+    font-family: "Times New Roman", Times, serif;
 }
-
-input[type=radio] {
+ input[type=submit] {
     padding:5px 15px; 
-    background-color:#ccc; 
+    background:#C37D92; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+ input[type=radio] {
+    padding:5px 15px; 
+    background:#ccc; 
     border:0 none;
     cursor:pointer;
     border-radius: 2px; 
@@ -22,11 +33,19 @@ input[type=radio] {
 p{
 font-weight: bold;
 }
-.footer {
+.footer-left {
    position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
    background-color:#E7D7C1;
    text-align: left;
+}
+.footer{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:#E7D7C1;
+   text-align: center;
 }

@@ -1,26 +1,27 @@
+<!DOCTYPE html>
 <html>
-<html>
-    <head>
-        <title>Welcome!</title>
-        <link rel="stylesheet" href="static/css/style.css" type="text/css">
-    </head>
-    <body>
-        <h1>Money Moves</h1>
-        <div class="filled-border">
-
-            <!-- <form name="myWebForm"  method="post"> -->
-             <form method="post" action="/question3">
-                <h4>{{question["question"]}}</h4>
-                <input type="radio" name="answer" value="wrong"/></input>
-                <label for="answer">{{question["wrong_answers"][0]}}</label><br>
-                <input type="radio" name="answer"  value="wrong" /> </input>
-                <label for="answer">{{question["wrong_answers"][1]}}</label><br>
-                <input type="radio"  name="answer" value="correct"/></input>
-                <label for="answer">{{question["correct_answer"]}}</label><br>
-                <!-- this is the code for the next button -->
-           
-                <input type="submit" value="Next">
-            </form>
-      </div>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
+  </head>
+  <body>
+ <h1></h1>
+  <!-- make form send user to another page which will be the next part of quiz -->
+    <div class = "filled-border">
+        <p>{{question["question"]}}</p>
+        <form action="/question3" method ="post">
+            <input type="radio" id="answer4" name="Q1" value="answer4">
+            <label for="answer4">{{question["wrong_answers"][0]}}</label><br>
+            <br>
+            <input type="radio" id="answer5" name="Q1" value="answer5">
+            <label for="answer5">{{question["wrong_answers"][1]}}</label><br>
+            <br>
+            <input type="radio" id="answer6" name="Q1" value="answer6">
+            <label for="answer6">{{question["correct_answer"]}}</label>
+            <br><br>
+            <input type="submit" value="Next">
+        </form>
+    </div>
+  </body>
 </html>

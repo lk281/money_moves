@@ -1,28 +1,25 @@
+<!DOCTYPE html>
 <html>
-<html>
-    <head>
-        <title>Welcome!</title>
-        <link rel="stylesheet" href="static/css/style.css" type="text/css">
-    </head>
-    <body>
-        <h1>Money Moves</h1>
-        <div class="filled-border">
-
-            <!-- <form name="myWebForm"  method="post"> -->
-             <form method="post" action="/question2"}>
-                <h4>{{question["question"]}}</h4>
-                <input type="radio" name="answer" value="wrong"/> </input>
-                <label for="answer">{{question["wrong_answers"][0]}}</label><br>
-                <input type="radio" name="answer"  value="wrong" /> </input>
-                <label for="answer">{{question["wrong_answers"][1]}}</label><br>
-                <input type="radio"  name="answer" value="correct"/> </input>
-                <label for="answer">{{question["correct_answer"]}}</label><br>
-            <!-- </form> -->
-
-                <!-- this is the code for the next button -->
-           
-                <input type="submit" value="Next">
-            </form>
-      </div>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+  </head>
+<body>
+    <div class = "filled-border">
+         <p>{{question["question"]}}</p>
+         <form action="/question2" method ="post">
+            <input type="radio" id="answer1" name="Q1" value="answer1">
+            <label for="answer1">{{question["wrong_answers"][0]}}</label><br>
+            <br>
+            <input type="radio" id="answer2" name="Q1" value="answer2">
+            <label for="answer2">{{question["wrong_answers"][1]}}</label><br>
+            <br>
+            <input type="radio" id="answer3" name="Q1" value="answer3">
+            <label for="answer3">{{question["correct_answer"]}}</label>
+            <br><br>
+            <input type="submit" value="Next">
+         </form>
+    </div>
+  </body>
 </html>

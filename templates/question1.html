@@ -11,7 +11,6 @@
             <!-- <form name="myWebForm"  method="post"> -->
              <form method="post" action="/question2"}>
                 <h4>{{question["question"]}}</h4>
-                <!-- sends the value to the python -->
                 <input type="radio" name="answer" value="wrong"/> : {{question["wrong_answers"][0]}}</input><br>
                 <input type="radio" name="answer"  value="wrong" /> : {{question["wrong_answers"][1]}}</input><br>
                 <input type="radio"  name="answer" value="correct"/> : {{question["correct_answer"]}}</input><br>
@@ -20,11 +19,7 @@
                 <!-- this is the code for the next button -->
            
                 <button type="submit">Next</button> 
-                <!-- <a href="question2.html">
-                <input type="submit"/>
-                </a> -->
             </form>
-                
       </div>
     </body>
 </html>

@@ -1,13 +1,18 @@
 <html>
-    <head>
-        <title>Welcome!</title>
-        <link rel="stylesheet" href="static/css/style.css" type="text/css">
-    </head>
-    <body>
-        <h1 class = "title">Money Moves: The First Step to Financial Literacy</h1>
-        <form method="get" action="/question1">
-            <button class="btn btn-outline-success start_button btn-lg" type="submit">Start Quiz</button>
-        </form>
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+  </head>
+  <body >
+  <!-- make form send user to another page which will be the next part of quiz -->
+        <div class = "filled-border">
+            <h1>Money Moves</h1>
+            <form action="/question1" method ="get">
+                <input type="submit" value="Begin Quiz">
+            </form>
+        </div>
     </body>
 </html>

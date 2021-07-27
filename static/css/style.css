@@ -1,0 +1,31 @@
+/* body {
+
+} */
+
+ input[type=radio] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 2px; 
+}
+.filled-border{
+    border:3px solid #E7D7C1;
+    border-radius: 50px;
+    background-color: #E7D7C1;
+    width: 40%;
+    margin:0 auto;
+    padding-bottom: 20px;
+    font-family: Georgia, serif;
+}
+p{
+font-weight: bold;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:#E7D7C1;
+   text-align: left;
+}

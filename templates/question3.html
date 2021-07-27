@@ -1,0 +1,25 @@
+<html>
+<html>
+    <head>
+        <title>Welcome!</title>
+        <link rel="stylesheet" href="static/css/style.css" type="text/css">
+    </head>
+    <body>
+        <h1>Money Moves</h1>
+        <div class="filled-border">
+
+            <!-- <form name="myWebForm"  method="post"> -->
+             <form method="post" action="/result">
+                <h4>{{question["question"]}}</h4>
+                <input type="radio" name="answer" value="wrong"/> : {{question["wrong_answers"][0]}}</input><br>
+                <input type="radio" name="answer"  value="wrong" /> : {{question["wrong_answers"][1]}}</input><br>
+                <input type="radio"  name="answer" value="correct"/> : {{question["correct_answer"]}}</input><br>
+            <!-- </form> -->
+
+                <!-- this is the code for the next button -->
+           
+                <button type="submit">Next</button> 
+            </form>
+      </div>
+    </body>
+</html>

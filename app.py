@@ -10,7 +10,7 @@ from model import question_list
 # -- Initialization section --
 app = Flask(__name__)
 
-user_answers = {"question1": "", "question2": "", "question3": ""}
+user_answers = {"question1": "", "question2": "", "question3": "", "question4": "", "question5": ""}
 
 # -- Routes section --
 
@@ -57,6 +57,29 @@ def question_three():
             user_answers["question2"] = "wrong"
     return render_template('question3.html', question = question)
 
+@app.route('/')
+@app.route('/question4', methods=['GET', 'POST'])
+def question_four():
+    question = question_list[3]
+    if request.method == 'POST': 
+        answer = request.form['Q1']
+        if answer == "answer9":
+            user_answers["question3"] = "correct"
+        else: 
+            user_answers["question3"] = "wrong"
+    return render_template('question4.html', question = question)
+
+@app.route('/')
+@app.route('/question5', methods=['GET', 'POST'])
+def question_five():
+    question = question_list[4]
+    if request.method == 'POST': 
+        answer = request.form['Q4']
+        if answer == "answer12":
+            user_answers["question4"] = "correct"
+        else: 
+            user_answers["question4"] = "wrong"
+    return render_template('question5.html', question = question)
 
 @app.route('/')
 @app.route('/results', methods=['GET', 'POST'])
@@ -64,11 +87,11 @@ def question_three():
 def result():
 
     if request.method == 'POST': 
-        answer = request.form["Q1"]
-        if answer == "answer9":
-            user_answers["question3"] = "correct"
+        answer = request.form["Q5"]
+        if answer == "answer15":
+            user_answers["question5"] = "correct"
         else: 
-            user_answers["question3"] = "wrong"
+            user_answers["question5"] = "wrong"
 
     score = 0
 

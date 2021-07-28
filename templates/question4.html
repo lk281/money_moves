@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+  </head>
+<body>
+    <div class = "filled-border">
+         <p>{{question["question"]}}</p>
+         <form action="/question5" method ="post">
+            <input type="radio" id="answer10" name="Q4" value="answer10">
+            <label for="answer10">{{question["wrong_answers"][0]}}</label><br>
+            <br>
+            <input type="radio" id="answer11" name="Q4" value="answer11">
+            <label for="answer11">{{question["wrong_answers"][1]}}</label><br>
+            <br>
+            <input type="radio" id="answer12" name="Q4" value="answer12">
+            <label for="answer12">{{question["correct_answer"]}}</label>
+            <br><br>
+            <input type="submit" value="Next">
+         </form>
+    </div>
+  </body>
+</html>

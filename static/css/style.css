@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: #735751;
+    background-color: #C5E6A6;
     padding: 170px 0;
     font-family: "Times New Roman", Times, serif;
 }
@@ -22,9 +22,9 @@ body {
     border-radius: 2px; 
 }
 .filled-border{
-    border:3px solid #E7D7C1;
+    border:3px solid #BDD2A6;
     border-radius: 50px;
-    background-color: #E7D7C1;
+    background-color: #BDD2A6;
     width: 40%;
     margin:0 auto;
     padding-bottom: 20px;

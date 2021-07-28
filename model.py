@@ -1,4 +1,3 @@
-import random
 
 #each question is its own dictionary then they are added to a question list 
 question1 = {"question": "What is money?", "wrong_answers": ["another word for dollars", "the paper version of coins"], 
@@ -14,12 +13,3 @@ question5 = {"question": "What is Annual Percentage Rate?", "wrong_answers": ["T
 
 question_list = [question1, question2, question3, question4, question5]
 
-def randomize_answers(question_dictionary):
-    wrong_answers = question_dictionary["wrong_answers"]
-    correct_answer = question_dictionary["correct_answer"]
-
-    answers_dictionary = {wrong_answers[0]: "wrong", wrong_answers[1]: "wrong", correct_answer: "correct"}
-    random_answers = list(answers_dictionary.keys())
-    random.shuffle(random_answers)
-
-    return random_answers, answers_dictionary

@@ -38,7 +38,7 @@ font-weight: bold;
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color:#E7D7C1;
+   background-color:#BDD2A6;
    text-align: left;
 }
 .footer{
@@ -46,6 +46,20 @@ font-weight: bold;
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color:#E7D7C1;
+   background-color:#BDD2A6;
    text-align: center;
+}
+.dropup{
+  color:#243119;
+  padding: 0px 20px;
+  text-decoration: none;
+  display: center;
+  transition: ease 0.5s;
+}
+/* Change color of dropup links on hover */
+.dropup:hover {background-color: #96BE8C}
+a{
+    color:#344427;
+    text-decoration: none;
+    font-family:'Lora', serif; 
 }

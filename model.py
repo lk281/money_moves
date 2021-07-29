@@ -19,7 +19,7 @@ def randomize_answers(question_dictionary):
     wrong_answer2 = question_dictionary["wrong_answers"][1]
     correct_answer = question_dictionary["correct_answer"]
 
-    answers_dictionary = {wrong_answer1: "wrong", wrong_answer2: "wrong", correct_answer: "correct"}
+    answers_dictionary = {wrong_answer1: 0, wrong_answer2: 0, correct_answer: 1}
     random_answers = list(answers_dictionary.keys())
     random.shuffle(random_answers)
 

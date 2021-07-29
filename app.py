@@ -19,6 +19,8 @@ user_answers = {"question1": "", "question2": "", "question3": "", "question4": 
 
 # first page that shows up when the app is run
 def homepage():
+    # global user_answers 
+    # user_answers = {"question1": "", "question2": "", "question3": "", "question4": "", "question5": ""}
     return render_template('index.html')
 
 
@@ -45,7 +47,7 @@ def question_two():
     third_answer = random_answers[2]
     if request.method == 'POST': 
         answer = request.form['Q1']
-        if answer == "correct":
+        if answer == "1":
             user_answers["question1"] = "correct"
         else: 
             user_answers["question1"] = "wrong"
@@ -63,7 +65,7 @@ def question_three():
     third_answer = random_answers[2]
     if request.method == 'POST': 
         answer = request.form['Q1']
-        if answer == "correct":
+        if answer == "1":
             user_answers["question2"] = "correct"
         else: 
             user_answers["question2"] = "wrong"
@@ -79,7 +81,7 @@ def question_four():
     third_answer = random_answers[2]
     if request.method == 'POST': 
         answer = request.form['Q1']
-        if answer == "correct":
+        if answer == "1":
             user_answers["question3"] = "correct"
         else: 
             user_answers["question3"] = "wrong"
@@ -95,7 +97,7 @@ def question_five():
     third_answer = random_answers[2]
     if request.method == 'POST': 
         answer = request.form['Q4']
-        if answer == "correct":
+        if answer == "1":
             user_answers["question4"] = "correct"
         else: 
             user_answers["question4"] = "wrong"
@@ -108,7 +110,7 @@ def result():
 
     if request.method == 'POST': 
         answer = request.form["Q5"]
-        if answer == "correct":
+        if answer == "1":
             user_answers["question5"] = "correct"
         else: 
             user_answers["question5"] = "wrong"
@@ -116,6 +118,8 @@ def result():
     score = 0
 
     for key in user_answers.keys(): 
+        print(key)
+        print(user_answers[key])
         if user_answers[key] == "correct":
             score += 1
     return render_template('results.html', score = score)

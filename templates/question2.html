@@ -9,16 +9,16 @@
  <h1></h1>
   <!-- make form send user to another page which will be the next part of quiz -->
     <div class = "filled-border">
-        <p>{{question["question"]}}</p>
+        <p class= "textcolor">{{question["question"]}}</p>
         <form action="/question3" method ="post">
-            <input type="radio" id="answer4" name="Q1" value="answer4">
-            <label for="answer4">{{question["wrong_answers"][0]}}</label><br>
+            <input type="radio" id="answer4" name="Q1" value={{answers_dictionary[first_answer]}}>
+            <label for="answer4">{{first_answer}}</label><br>
             <br>
-            <input type="radio" id="answer5" name="Q1" value="answer5">
-            <label for="answer5">{{question["wrong_answers"][1]}}</label><br>
+            <input type="radio" id="answer5" name="Q1" value={{answers_dictionary[second_answer]}}>
+            <label for="answer5">{{second_answer}}</label><br>
             <br>
-            <input type="radio" id="answer6" name="Q1" value="answer6">
-            <label for="answer6">{{question["correct_answer"]}}</label>
+            <input type="radio" id="answer6" name="Q1" value={{answers_dictionary[third_answer]}}>
+            <label for="answer6">{{third_answer}}</label>
             <br><br>
             <input type="submit" value="Next">
         </form>

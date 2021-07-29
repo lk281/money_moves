@@ -6,16 +6,16 @@
   </head>
 <body>
     <div class = "filled-border">
-         <p>{{question["question"]}}</p>
+         <p class= "textcolor">{{question["question"]}}</p>
          <form action="/results" method ="post">
-            <input type="radio" id="answer13" name="Q5" value="answer13">
-            <label for="answer13">{{question["wrong_answers"][0]}}</label><br>
+            <input type="radio" id="answer13" name="Q5" value={{answers_dictionary[first_answer]}}>
+            <label for="answer13">{{first_answer}}</label><br>
             <br>
-            <input type="radio" id="answer14" name="Q5" value="answer14">
-            <label for="answer14">{{question["wrong_answers"][1]}}</label><br>
+            <input type="radio" id="answer14" name="Q5" value={answers_dictionary[second_answer]}}>
+            <label for="answer14">{{second_answer}}</label><br>
             <br>
-            <input type="radio" id="answer15" name="Q5" value="answer15">
-            <label for="answer15">{{question["correct_answer"]}}</label>
+            <input type="radio" id="answer15" name="Q5" value={answers_dictionary[third_answer]}}>
+            <label for="answer15">{{third_answer}}</label>
             <br><br>
             <input type="submit" value="Results">
          </form>

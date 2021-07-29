@@ -5,7 +5,7 @@ from datetime import datetime
 from flask_pymongo import PyMongo
 # from model import getImageUrlFrom
 import os
-from model import question_list
+from model import question_list, randomize_answers
 
 # -- Initialization section --
 app = Flask(__name__)
@@ -27,7 +27,11 @@ def homepage():
 
 def question_one():
     question = question_list[0]
-    return render_template('question1.html', question = question)
+    random_answers, answers_dictionary = randomize_answers(question)
+    first_answer = random_answers[0]
+    second_answer = random_answers[1]
+    third_answer = random_answers[2]
+    return render_template('question1.html', question = question, first_answer=first_answer, second_answer=second_answer, third_answer=third_answer, answers_dictionary = answers_dictionary)
 
 
 @app.route('/')
@@ -35,13 +39,17 @@ def question_one():
 
 def question_two():
     question = question_list[1]
+    random_answers, answers_dictionary = randomize_answers(question)
+    first_answer = random_answers[0]
+    second_answer = random_answers[1]
+    third_answer = random_answers[2]
     if request.method == 'POST': 
         answer = request.form['Q1']
-        if answer == "answer3":
+        if answer == "correct":
             user_answers["question1"] = "correct"
         else: 
             user_answers["question1"] = "wrong"
-    return render_template('question2.html', question = question)
+    return render_template('question2.html', question = question, first_answer=first_answer, second_answer=second_answer, third_answer=third_answer, answers_dictionary = answers_dictionary)
 
 
 @app.route('/')
@@ -49,37 +57,49 @@ def question_two():
 
 def question_three():
     question = question_list[2]
+    random_answers, answers_dictionary = randomize_answers(question)
+    first_answer = random_answers[0]
+    second_answer = random_answers[1]
+    third_answer = random_answers[2]
     if request.method == 'POST': 
         answer = request.form['Q1']
-        if answer == "answer6":
+        if answer == "correct":
             user_answers["question2"] = "correct"
         else: 
             user_answers["question2"] = "wrong"
-    return render_template('question3.html', question = question)
+    return render_template('question3.html', question = question, first_answer=first_answer, second_answer=second_answer, third_answer=third_answer, answers_dictionary = answers_dictionary)
 
 @app.route('/')
 @app.route('/question4', methods=['GET', 'POST'])
 def question_four():
     question = question_list[3]
+    random_answers, answers_dictionary = randomize_answers(question)
+    first_answer = random_answers[0]
+    second_answer = random_answers[1]
+    third_answer = random_answers[2]
     if request.method == 'POST': 
         answer = request.form['Q1']
-        if answer == "answer9":
+        if answer == "correct":
             user_answers["question3"] = "correct"
         else: 
             user_answers["question3"] = "wrong"
-    return render_template('question4.html', question = question)
+    return render_template('question4.html', question = question, first_answer=first_answer, second_answer=second_answer, third_answer=third_answer, answers_dictionary = answers_dictionary)
 
 @app.route('/')
 @app.route('/question5', methods=['GET', 'POST'])
 def question_five():
     question = question_list[4]
+    random_answers, answers_dictionary = randomize_answers(question)
+    first_answer = random_answers[0]
+    second_answer = random_answers[1]
+    third_answer = random_answers[2]
     if request.method == 'POST': 
         answer = request.form['Q4']
-        if answer == "answer12":
+        if answer == "correct":
             user_answers["question4"] = "correct"
         else: 
             user_answers["question4"] = "wrong"
-    return render_template('question5.html', question = question)
+    return render_template('question5.html', question = question, first_answer=first_answer, second_answer=second_answer, third_answer=third_answer, answers_dictionary = answers_dictionary)
 
 @app.route('/')
 @app.route('/results', methods=['GET', 'POST'])
@@ -88,7 +108,7 @@ def result():
 
     if request.method == 'POST': 
         answer = request.form["Q5"]
-        if answer == "answer15":
+        if answer == "correct":
             user_answers["question5"] = "correct"
         else: 
             user_answers["question5"] = "wrong"

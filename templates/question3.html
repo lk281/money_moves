@@ -3,21 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <title>title</title>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
     <link rel="stylesheet" href="static/css/style.css" type="text/css">
   </head>
   <body>
             <!-- make form send user to another page which will be the next part of quiz -->
         <div class = "filled-border">
-            <p>{{question["question"]}}</p>
+            <p class= "textcolor">{{question["question"]}}</p>
             <form action="/question4" method ="post">
-                <input type="radio" id="answer7" name="Q1" value="answer7">
-                <label for="answer7">{{question["wrong_answers"][0]}}</label><br>
+                <input type="radio" id="answer7" name="Q1" value={{answers_dictionary[first_answer]}}>
+                <label for="answer7">{{first_answer}}</label><br>
                 <br>
-                <input type="radio" id="answer8" name="Q1" value="answer8">
-                <label for="answer8">{{question["wrong_answers"][1]}}</label><br>
+                <input type="radio" id="answer8" name="Q1" value={{answers_dictionary[second_answer]}}>
+                <label for="answer8">{{second_answer}}</label><br>
                 <br>
-                <input type="radio" id="answer9" name="Q1" value="answer9">
-                <label for="answer9">{{question["correct_answer"]}}</label>
+                <input type="radio" id="answer9" name="Q1" value={{answers_dictionary[third_answer]}}>
+                <label for="answer9">{{third_answer}}</label>
                 <br><br>
                 <input type="submit" value="Next">
             </form>

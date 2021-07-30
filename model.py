@@ -6,7 +6,7 @@ question1 = {"question": "What is the difference between a credit card and a deb
 
 question2 = {"question": "What should be the purpose of an investment?", "wrong_answers": ["To waste money.", "There is no purpose of an investment. "], "correct_answer": "To potentially increase the amount of money you have."}
 
-question3 = {"question": "What is FASFA?", "wrong_answers": ["A loan issued by the government to help pay for college.", "The Fast Food Association scholarship that aids in paying off student loans."], "correct_answer": " A Free Application for Federal Student Aid used by college students to determine their eligibility for student financial aid."}
+question3 = {"question": "What is FAFSA?", "wrong_answers": ["A loan issued by the government to help pay for college.", "The Fast Food Association scholarship that aids in paying off student loans."], "correct_answer": " A Free Application for Federal Student Aid used by college students to determine their eligibility for student financial aid."}
 
 question4 = {"question": "What is a credit score?", "wrong_answers": ["It is the maximum amount of money you can spend on your credit card.", "It is the amount of money you have on your debit card."], "correct_answer": "It predicts how likely you are to pay back a loan on time."}
 
